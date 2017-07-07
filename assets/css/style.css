@@ -1,0 +1,22 @@
+body {
+	display: table-cell;
+	align-items: center;
+	text-align: center;
+}
+
+html, body {
+	height: 100%;
+}
+
+html {
+	display: table;
+	width: 100%
+}
+
+textarea {
+	width: 80%;
+}
+
+#commentInput {
+	width: 76%;
+}

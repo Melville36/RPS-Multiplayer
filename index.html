@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RPS Game</title>
+	<link rel="stylesheet" href="../RPS-Multiplayer/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../RPS-Multiplayer/assets/css/style.css">
+</head>
+<body>
+	<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyCRtgdOSc_Bn560jKlE7gI5eRM-RrEE-58",
+	    authDomain: "rps-game-2dbc7.firebaseapp.com",
+	    databaseURL: "https://rps-game-2dbc7.firebaseio.com",
+	    projectId: "rps-game-2dbc7",
+	    storageBucket: "",
+	    messagingSenderId: "926792663692"
+	  };
+	  firebase.initializeApp(config);
+
+
+	</script>
+	<div class="row">
+		<div class="page-header">
+			<h1>Rock Paper Scisscors Shoot!</h1>
+		</div>
+	</div>
+	
+	<div class="row">
+		<input type="text" name="nameInput" value="Name"><button id="startButton">Start</button>
+	</div>
+	<br>
+	<div class="row">
+		<div class="panel panel-primary col-md-4">
+			<p id="player1">Waiting for Player 1</p><br>
+			<button id="rock1">Rock</button><br>
+			<button id="paper1">Paper</button><br>
+			<button id="scisscors1">Scisscors</button>
+		</div>	
+		<div class="panel panel-primary col-md-4">
+			
+		</div>
+		<div class="panel panel-primary col-md-4">
+			<p id="player2">Waiting for Player 2</p><br>
+			<button id="rock2">Rock</button><br>
+			<button id="paper2">Paper</button><br>
+			<button id="scisscors2">Scisscors</button>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-md-12">
+			<textarea>Comments</textarea>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<input type="text" name="commentInput" id="commentInput"><button id="sendComment">Send</button>
+		</div>	
+	</div>
+	
+
+</body>
+</html>
