@@ -19,6 +19,27 @@
 	  };
 	  firebase.initializeApp(config);
 
+	  var database = firebase.database();
+
+	  $("#startButton").on("click", function(event){
+	  		event.preventDefault();
+
+	  		var nameInput = $("#nameInput").val().trim();
+	  		var wins = 0;
+	  		var loss = 0;
+	  		
+
+	  		var newPlayer = {
+	  			name: nameInput,
+	  			winTotal: wins,
+	  			lossTotal: loss
+	  		};
+
+	  		database.ref().push(newPlayer);
+
+	  });
+
+	  
 
 	</script>
 	<div class="row">
@@ -27,7 +48,7 @@
 		</div>
 	</div>
 	
-	<div class="row">
+	<div class="row" id="nameSection">
 		<input type="text" name="nameInput" value="Name"><button id="startButton">Start</button>
 	</div>
 	<br>
@@ -36,7 +57,9 @@
 			<p id="player1">Waiting for Player 1</p><br>
 			<button id="rock1">Rock</button><br>
 			<button id="paper1">Paper</button><br>
-			<button id="scisscors1">Scisscors</button>
+			<button id="scisscors1">Scisscors</button><br>
+			<p>Wins:<span id="winCount"></span></p><br>
+			<p>Losses:<span id="lossCount"></span></p>
 		</div>	
 		<div class="panel panel-primary col-md-4">
 			
@@ -45,13 +68,15 @@
 			<p id="player2">Waiting for Player 2</p><br>
 			<button id="rock2">Rock</button><br>
 			<button id="paper2">Paper</button><br>
-			<button id="scisscors2">Scisscors</button>
+			<button id="scisscors2">Scisscors</button><br>
+			<p>Wins:<span id="winCount"></span></p><br>
+			<p>Losses:<span id="lossCount"></span></p>
 		</div>
 	</div>
 	<br>
 	<div class="row">
 		<div class="col-md-12">
-			<textarea>Comments</textarea>
+			<textarea></textarea>
 		</div>
 	</div>
 	<div class="row">

@@ -2,6 +2,7 @@ body {
 	display: table-cell;
 	align-items: center;
 	text-align: center;
+	background-image: url("../RPS-Multiplayer/assets/images/rps.png");
 }
 
 html, body {
@@ -11,6 +12,7 @@ html, body {
 html {
 	display: table;
 	width: 100%
+
 }
 
 textarea {
